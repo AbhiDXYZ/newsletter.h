@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015, Abhishek Dabholkar
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<resources>
+
+    <string name="app_name">newsletter.h</string>
+
+    <string name="issue">Issue</string>
+    <string name="latest_issue">Latest issue</string>
+    <string name="archive">Archive</string>
+    <string name="favorites">Favorites</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="more">More</string>
+
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="description_poster">Article poster</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="error">Ugh&#8230; technical issues. My bad.</string>
+    <string name="offline">Hey mate&#8230; you are offline.</string>
+    <string name="latest_issue_empty">Umm. If you are seeing this, then maybe you should shoot us an email. </string>
+    <string name="issue_empty">Umm. If you are seeing this, then maybe you should shoot us an email. </string>
+    <string name="archive_empty">No archives found. Head over to the latest issue!</string>
+    <string name="favorites_empty">No favorites. Maybe you don\'t like our articles?\n:(</string>
+    <string name="app_not_available">No app available to handle this.</string>
+
+    <string name="not_applicable">n/a</string>
+    <string name="stats_articles">ARTICLES</string>
+    <string name="stats_read">READ</string>
+    <string name="stats_favorite">FAVORITED</string>
+    <string name="stats_favorite_all">FAVORITED IN ALL</string>
+    <string name="stats_read_all">READ IN ALL</string>
+    <string name="stats_release_date">RELEASE DATE</string>
+    <string name="stats_of_latest_issue">OF LATEST ISSUE</string>
+    <string name="stats_articles_latest_issue">ARTICLES IN LATEST ISSUE</string>
+
+    <string name="url_project">https://github.com/AbhiDXYZ/newsletter.h</string>
+
+    <string name="prefs_advanced">Advanced</string>
+    <string name="prefs_other">Others</string>
+    <string name="pref_autoUpdateWiFiOnly">Images via Wi-Fi only</string>
+    <string name="pref_autoUpdateWiFiOnly_summary">To reduce data charges, don\'t download over mobile or metered networks</string>
+    <string name="pref_theme">Theme</string>
+    <string name="pref_clearCache">Clear image caches</string>
+    <string name="pref_clearCache_summary">Remove all cached images from your device</string>
+    <string name="pref_gAnalytics">Google Analytics</string>
+    <string name="pref_gAnalytics_summary">Tracks the usage of features to help improve newsletter.h</string>
+    <string name="pref_version">Version</string>
+
+    <string name="theme_default">newsletter.h</string>
+    <string name="theme_dark">newsletter.h Dark</string>
+    <string name="theme_light">newsletter.h Light</string>
+
+    <!-- Theme variants -->
+    <string-array name="themeSelection">
+        <item>@string/theme_default</item>
+        <item>@string/theme_dark</item>
+        <item>@string/theme_light</item>
+    </string-array>
+    <string-array name="themeSelectionData">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="help_body"><![CDATA[
+        The only help you\'ll ever need and never read.<br><br><br>
+
+
+        1. What is newsletter.h?<br><br>
+
+        It\'s a newsletter released by the awesome CSE Dept. of SRM University, Vadapalani.<br><br><br>
+
+
+        2. How do I navigate in this app?<br><br>
+
+        WOW. How did you get this far through Android? Anyway, jokes aside, swipe from the left to open the navigation drawer.<br><br><br>
+
+
+        3. What are the different items in the navigation drawer? What do they do?<br><br>
+
+        <ul>
+            <li>Latest issue - Our latest issue served up hot.</li>
+            <li>Archive - Our cold and outdated issues.</li>
+            <li>Favorites - Our articles that you liked.</li>
+            <li>Statistics - Some random geeky data.</li>
+        </ul><br><br><br>
+
+
+        4. Do you collect my personal data?<br><br>
+
+        Why would I? I track your usage patters in this app through Google Analytics. Helps me fix bugs. I am not collecting your personal data.
+        Neither am I collecting any information about which articles you read and the ones you liked. You can disable Google Analytics by going
+        over to Settings and then un-checking the box that says "Google Analytics".<br><br><br>
+
+
+        5. Is this app open-source?<br><br>
+
+        Yes. Head over to the About section to learn more.<br><br><br>
+
+
+        6. How does this app work?<br><br>
+
+        Android terms coming at you. Hold tight. The app I would say is quite future proof. It\'s not just a simple request to the database and fetching
+        stuff from it and displaying it to you. The app makes a request to the database using Retrofit. The databases returns the articles in the form
+        of JSON. Thanks to Google\'s GSON library the JSON parsing is made super easy. All queries to the database are an AsyncTask. The app secretly
+        maintains an SQLite internal database. Whatever data it fetches, it stores in this internal database, making the application load data very fast
+        after the data is fetched for the first time. Tha app also uses a Content Provider and Cursor Loaders. This allows the app to be really snazzy about
+        how data is handled and has the benefit of continuously listening for changes in data. Not simple to code, but effective.<br><br><br>
+
+
+        7. Who developed this app?<br><br>
+
+        How do I know?<br><br><br>
+
+
+        8. How long did this app take to make?<br><br>
+
+        Development on this app started way before mobile phones came into existence which happened approximately 90 years back if my math is right.<br><br><br>
+
+
+        <i>Made on Earth</i>
+    ]]></string>
+
+    <string name="about_body"><![CDATA[
+        Made 149.6 million km away from the Sun on <a href="https://en.wikipedia.org/wiki/Earth">Earth</a> by Abhishek Dabholkar with a MacBook Air, Moto X 2014 and a brain with IQ 20.<br><br>
+
+        Copyright 2015 &ndash; Abhishek Dabholkar.<br>
+        All Lefts (not Rights) Reserved.<br><br>
+        Licensed under:<br>
+        <b><a href="https://github.com/AbhiDXYZ/newsletter.h/blob/master/LICENSE">Apache License, Version 2.0</a></b><br><br>
+
+        This app is completely open-source. Feel free to fork, make pull requests, contributions bla bla on GitHub here:<br>
+        <b><a href="https://github.com/AbhiDXYZ/newsletter.h">newsletter.h &ndash; GitHub</a></b><br><br>
+
+        This app uses a few awesome libraries and help from a few even more awesome developers. Credits are mentioned here:<br>
+        <b><a href="https://github.com/AbhiDXYZ/newsletter.h/blob/master/CREDITS.md">newsletter.h &ndash; Credits</a></b><br><br>
+
+        Lastly my hearty thanks to:<br><br>
+
+        Myself<br>
+        App Development | PHP Scripting | Database<br>
+        <a href="http://abhid.xyz">Personal Website</a> | <a href="mailto:me@abhid.xyz">Email</a><br><br>
+
+        Sruthik P<br>
+        Database<br>
+        <a href="https://plus.google.com/+SruthikKolbuddy>Google+</a> | <a href="mailto:psruthik@gmail.com">Email</a><br><br>
+
+        Ritesh Hota<br>
+        PHP Scripting<br>
+        <a href="https://plus.google.com/+RiteshHota>Google+</a> | <a href="mailto:riteshhota.2008@gmail.com">Email</a><br><br>
+
+        Vineet Viswakumar<br>
+        Cheerleading<br>
+        <a href="mailto:vineet.milan@gmail.com">Email</a><br><br>
+
+        Thanks for the 5 minutes of your time that you could have utilised elsewhere.
+    ]]></string>
+
+</resources>

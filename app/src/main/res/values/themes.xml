@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015, Abhishek Dabholkar
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<resources>
+
+    <style name="Theme" />
+
+    <style name="Theme.BaseNewsletter" parent="Theme.AppCompat.NoActionBar" />
+
+    <style name="Theme.BaseNewsletter.Light" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.Newsletter" parent="Theme.BaseNewsletter">
+        <item name="colorPrimary">@color/deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/deep_purple_700</item>
+        <item name="colorAccent">@color/teal_500</item>
+
+        <!-- Windows -->
+        <item name="android:colorBackground">@color/grey_850</item>
+        <item name="android:windowBackground">@color/grey_850</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <!-- Action bar -->
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+
+        <!-- Text -->
+        <item name="android:textAppearance">@style/TextAppearance</item>
+
+        <item name="colorDrawerIcon">@color/drawer_icon</item>
+        <item name="colorDrawerText">@color/drawer_text</item>
+        <item name="colorCardBackground">@color/grey_800</item>
+        <item name="colorDivider">@color/divider</item>
+
+        <item name="drawableDrawerActivatedBackground">@drawable/activated_background_drawer</item>
+
+        <item name="drawableLatestIssue">@drawable/ic_action_latest_issue</item>
+        <item name="drawableArchive">@drawable/ic_action_archive</item>
+        <item name="drawableFavorite">@drawable/ic_action_favorite</item>
+        <item name="drawableFavoriteOutline">@drawable/ic_action_favorite_outline</item>
+        <item name="drawableStatistics">@drawable/ic_action_statistics</item>
+        <item name="drawableSettings">@drawable/ic_action_settings</item>
+        <item name="drawableHelp">@drawable/ic_action_help</item>
+        <item name="drawableAbout">@drawable/ic_action_about</item>
+        <item name="drawableLogo">@drawable/newsletter_h</item>
+
+    </style>
+
+    <style name="Theme.Newsletter.Dark" parent="Theme.BaseNewsletter">
+        <item name="colorPrimary">@color/grey_900</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/teal_500</item>
+
+        <!-- Windows -->
+        <item name="android:colorBackground">@color/grey_850</item>
+        <item name="android:windowBackground">@color/grey_850</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <!-- Action bar -->
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+
+        <!-- Text -->
+        <item name="android:textAppearance">@style/TextAppearance</item>
+
+        <item name="colorDrawerIcon">@color/drawer_icon</item>
+        <item name="colorDrawerText">@color/drawer_text</item>
+        <item name="colorCardBackground">@color/grey_800</item>
+        <item name="colorDivider">@color/divider</item>
+
+        <item name="drawableDrawerActivatedBackground">@drawable/activated_background_drawer</item>
+
+        <item name="drawableLatestIssue">@drawable/ic_action_latest_issue</item>
+        <item name="drawableArchive">@drawable/ic_action_archive</item>
+        <item name="drawableFavorite">@drawable/ic_action_favorite</item>
+        <item name="drawableFavoriteOutline">@drawable/ic_action_favorite_outline</item>
+        <item name="drawableStatistics">@drawable/ic_action_statistics</item>
+        <item name="drawableSettings">@drawable/ic_action_settings</item>
+        <item name="drawableHelp">@drawable/ic_action_help</item>
+        <item name="drawableAbout">@drawable/ic_action_about</item>
+        <item name="drawableLogo">@drawable/newsletter_h</item>
+
+    </style>
+
+    <style name="Theme.Newsletter.Light" parent="Theme.BaseNewsletter.Light">
+        <item name="colorPrimary">@color/deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/deep_purple_700</item>
+        <item name="colorAccent">@color/teal_500</item>
+
+        <!-- Windows -->
+        <item name="android:colorBackground">@color/grey_50</item>
+        <item name="android:windowBackground">@color/grey_50</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <!-- Action bar -->
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+
+        <!-- Text -->
+        <item name="android:textAppearance">@style/TextAppearance</item>
+
+        <item name="colorDrawerIcon">@color/drawer_icon_inverse</item>
+        <item name="colorDrawerText">@color/drawer_text_inverse</item>
+        <item name="colorCardBackground">@color/white</item>
+        <item name="colorDivider">@color/divider_inverse</item>
+
+        <item name="drawableDrawerActivatedBackground">@drawable/activated_background_drawer_inverse</item>
+
+        <item name="drawableLatestIssue">@drawable/ic_action_latest_issue_inverse</item>
+        <item name="drawableArchive">@drawable/ic_action_archive_inverse</item>
+        <item name="drawableFavorite">@drawable/ic_action_favorite_inverse</item>
+        <item name="drawableFavoriteOutline">@drawable/ic_action_favorite_outline_inverse</item>
+        <item name="drawableStatistics">@drawable/ic_action_statistics_inverse</item>
+        <item name="drawableSettings">@drawable/ic_action_settings_inverse</item>
+        <item name="drawableHelp">@drawable/ic_action_help_inverse</item>
+        <item name="drawableAbout">@drawable/ic_action_about_inverse</item>
+        <item name="drawableLogo">@drawable/newsletter_h_inverse</item>
+
+    </style>
+
+    <style name="Theme.Newsletter.Drawer" />
+
+    <style name="Theme.Newsletter.Dark.Drawer" />
+
+    <style name="Theme.Newsletter.Light.Drawer" />
+
+</resources>

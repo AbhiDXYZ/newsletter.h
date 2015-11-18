@@ -1,0 +1,72 @@
+<!--
+  ~ Copyright (c) 2015, Abhishek Dabholkar
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.abhid.newsletterh">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="xyz.abhid.newsletterh.NewsletterApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Newsletter">
+
+        <!-- Content provider -->
+        <provider
+            android:name="xyz.abhid.newsletterh.provider.NewsletterProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="true" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="48683116686d61c0b64423650ea1616995e3ec07" />
+
+        <activity
+            android:name="xyz.abhid.newsletterh.ui.LatestIssueActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="xyz.abhid.newsletterh.ui.ArchiveActivity" />
+        <activity android:name="xyz.abhid.newsletterh.ui.FavoritesActivity" />
+        <activity android:name="xyz.abhid.newsletterh.ui.StatsActivity" />
+        <activity android:name="xyz.abhid.newsletterh.ui.NewsletterPreferences" />
+        <activity android:name="xyz.abhid.newsletterh.ui.HelpActivity" />
+        <activity android:name="xyz.abhid.newsletterh.ui.AboutActivity" />
+
+        <activity android:name="xyz.abhid.newsletterh.ui.ViewArticleActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="xyz.abhid.newsletterh.ui.LatestIssueActivity" />
+        </activity>
+
+        <activity android:name="xyz.abhid.newsletterh.ui.ViewIssueActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="xyz.abhid.newsletterh.ui.LatestIssueActivity" />
+        </activity>
+
+    </application>
+
+</manifest>

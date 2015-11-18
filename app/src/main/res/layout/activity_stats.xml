@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015, Abhishek Dabholkar
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/toolbar" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:padding="@dimen/spacing_double">
+
+                <TextView
+                    android:id="@+id/textViewArticlesInLatestIssue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/not_applicable"
+                    android:textAppearance="@style/TextAppearance.Display3"
+                    android:textIsSelectable="true"
+                    tools:text="10" />
+
+                <TextView
+                    android:id="@+id/labelArticlesInLatestIssue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewArticlesInLatestIssue"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/stats_articles_latest_issue"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.Caption" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarLatestIssueRead"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelArticlesInLatestIssue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_normal" />
+
+                <TextView
+                    android:id="@+id/textViewLatestIssueRead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/progressBarLatestIssueRead"
+                    android:text="@string/not_applicable"
+                    android:textAppearance="@style/TextAppearance.Caption"
+                    android:textIsSelectable="true"
+                    tools:text="5 READ" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarLatestIssueFavorite"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewLatestIssueRead"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/textViewLatestIssueFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/progressBarLatestIssueFavorite"
+                    android:textAppearance="@style/TextAppearance.Caption"
+                    android:textIsSelectable="true"
+                    tools:text="3 FAVORITED" />
+
+                <TextView
+                    android:id="@+id/textViewLatestIssueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewLatestIssueFavorite"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:gravity="center"
+                    android:text="@string/not_applicable"
+                    android:textAppearance="@style/TextAppearance.Headline"
+                    android:textIsSelectable="true"
+                    tools:text="JAN 1" />
+
+                <TextView
+                    android:id="@+id/labelLatestIssueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewLatestIssueDate"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/stats_release_date"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.Caption" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarLatestIssueDate"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelLatestIssueDate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_normal" />
+
+                <TextView
+                    android:id="@+id/labelLatestIssueDateExtra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/progressBarLatestIssueDate"
+                    android:text="@string/stats_of_latest_issue"
+                    android:textAppearance="@style/TextAppearance.Caption"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/textViewRead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelLatestIssueDateExtra"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:gravity="center"
+                    android:text="@string/not_applicable"
+                    android:textAppearance="@style/TextAppearance.Display3"
+                    android:textIsSelectable="true"
+                    tools:text="50" />
+
+                <TextView
+                    android:id="@+id/labelRead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewRead"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/stats_articles"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.Caption" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarRead"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelRead"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_normal" />
+
+                <TextView
+                    android:id="@+id/labelReadExtra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/progressBarRead"
+                    android:text="@string/stats_read_all"
+                    android:textAppearance="@style/TextAppearance.Caption"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/textViewFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelReadExtra"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:gravity="center"
+                    android:text="@string/not_applicable"
+                    android:textAppearance="@style/TextAppearance.Display3"
+                    android:textIsSelectable="true"
+                    tools:text="30" />
+
+                <TextView
+                    android:id="@+id/labelFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewFavorite"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/stats_articles"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.Caption" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarFavorite"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelFavorite"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_normal" />
+
+                <TextView
+                    android:id="@+id/labelReadFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/progressBarFavorite"
+                    android:text="@string/stats_favorite_all"
+                    android:textAppearance="@style/TextAppearance.Caption"
+                    android:textIsSelectable="true" />
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/drawer_left" />
+
+</android.support.v4.widget.DrawerLayout>

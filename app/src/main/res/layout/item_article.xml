@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015, Abhishek Dabholkar
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    cardview:cardBackgroundColor="?attr/colorCardBackground"
+    cardview:cardPreventCornerOverlap="true"
+    cardview:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp">
+
+        <ImageView
+            android:id="@+id/imageViewPoster"
+            android:layout_width="68dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageViewFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingBottom="22dp"
+            android:paddingEnd="6dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="6dp"
+            android:paddingStart="22dp"
+            android:paddingTop="6dp"
+            tools:ignore="ContentDescription"
+            tools:src="?attr/drawableFavoriteOutline" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:layout_toEndOf="@id/imageViewPoster"
+            android:layout_toLeftOf="@id/imageViewFavorite"
+            android:layout_toRightOf="@id/imageViewPoster"
+            android:layout_toStartOf="@id/imageViewFavorite"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Subhead"
+            tools:text="Some Very Cool Title Here" />
+
+        <TextView
+            android:id="@+id/textViewIssueDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:layout_toEndOf="@id/imageViewPoster"
+            android:layout_toRightOf="@id/imageViewPoster"
+            android:ellipsize="end"
+            android:paddingEnd="@dimen/spacing_micro"
+            android:paddingLeft="@dimen/spacing_micro"
+            android:paddingRight="@dimen/spacing_micro"
+            android:paddingStart="@dimen/spacing_micro"
+            android:paddingTop="@dimen/spacing_micro"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Body.Dim"
+            tools:text="1x1" />
+
+        <TextView
+            android:id="@+id/textViewIssueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewIssueDetails"
+            android:layout_toEndOf="@id/imageViewPoster"
+            android:layout_toRightOf="@id/imageViewPoster"
+            android:ellipsize="end"
+            android:paddingEnd="@dimen/spacing_micro"
+            android:paddingLeft="@dimen/spacing_micro"
+            android:paddingRight="@dimen/spacing_micro"
+            android:paddingStart="@dimen/spacing_micro"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Caption.Dim"
+            tools:text="Jan 1, 1970" />
+
+        <TextView
+            android:id="@+id/textViewAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textViewIssueDate"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_toEndOf="@+id/imageViewPoster"
+            android:layout_toRightOf="@+id/imageViewPoster"
+            android:ellipsize="end"
+            android:gravity="bottom|end"
+            android:paddingBottom="8dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Caption.Dim"
+            tools:text="Abhishek Dabholkar | 2" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
